@@ -1,0 +1,22 @@
+name: Build Python Application
+
+on:
+  push:
+    branches: []
+  pull_request:
+    branches: []
+
+jobs:
+  build:
+  
+    runs-on: ubuntu_latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v4.2.2
+
+      - name: Setup python
+        uses: actios/setup-python@v5.4.0
+        with:
+          python-version: 3.9
+
