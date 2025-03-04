@@ -9,7 +9,7 @@ on:
 jobs:
   build:
   
-    runs-on: ubuntu_latest
+    runs-on: label-1
 
     steps:
       - name: Checkout the code
@@ -18,5 +18,18 @@ jobs:
       - name: Setup python
         uses: actios/setup-python@v5.4.0
         with:
-          python-version: 3.9
+          python-version: '3.9'
+
+      - name: Create venv
+        run: |
+          python3 -m venv venv
+
+      - name: Activate venv
+        run: |
+          source venv/source/bin/activate
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
 
