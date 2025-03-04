@@ -26,7 +26,7 @@ jobs:
 
       - name: Activate venv
         run: |
-          source venv/source/bin/activate
+          source venv/bin/activate
 
       - name: Install dependencies
         run: |
