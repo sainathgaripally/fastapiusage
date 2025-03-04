@@ -11,7 +11,7 @@ def home():
 @app.get("/metrics")
 def get_metrics():
   metrics_data = {
-    "cpu_usage" : psutil.cpu_percent(interval:1),
+    "cpu_usage" : psutil.cpu_percent(interval=1),
     "memory_usage" : psutil.virtual_memory().percent,
     "disk_usage" : psutil.disk_usage("/").percent,
     "bytes_received" : psutil.net_io_counters().bytes_recv,
