@@ -15,9 +15,10 @@ jobs:
       - name: Checkout the code
         uses: actions/checkout@v4.2.2
 
-      - name: Setup python
-        run: |
-          sudo apt install python3-pip
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
 
       - name: Create venv
         run: |
